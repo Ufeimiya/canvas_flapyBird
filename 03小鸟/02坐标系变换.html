@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抛物线</title>
+</head>
+<body>
+<canvas id="cvs" width="800" height="500"></canvas>
+<script>
+    var cvs = document.getElementById('cvs');
+    var ctx = cvs.getContext('2d');
+
+    // 把坐标系的原点转换到现在的200,200的点上
+    ctx.translate(300, 300);
+    // 设置坐标系在x、y轴上的缩放
+    ctx.scale(1, 1);
+    // 设置坐标系的旋转
+    ctx.rotate(Math.PI * (1 / 6));
+
+    ctx.moveTo(-200, 0);
+    ctx.lineTo(200, 0);
+    ctx.moveTo(0, -200);
+    ctx.lineTo(0, 200);
+    ctx.stroke();
+
+    ctx.fillRect(0, 0, 50, 50);
+
+</script>
+</body>
+</html>

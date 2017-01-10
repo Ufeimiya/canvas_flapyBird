@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="cvs" width="800" height="600"></canvas>
+<script>
+    var cvs = document.getElementById('cvs');
+    var ctx = cvs.getContext('2d');
+    ctx.fillRect(0,0,50,50);
+
+    ctx.save();
+
+    ctx.translate(225,225);
+    ctx.rotate(Math.PI * (1 / 6));
+    ctx.fillRect(-25,-25, 50, 50);
+
+    ctx.restore();
+
+    ctx.fillRect(0,50,50,50);
+</script>
+</body>
+</html>

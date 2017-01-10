@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抛物线</title>
+</head>
+<body>
+<canvas id="cvs" width="800" height="500"></canvas>
+<script>
+    var cvs = document.getElementById('cvs');
+    var ctx = cvs.getContext('2d');
+
+    for (var x = 0; x < 800; x++) {
+        // y = ax2+bx+c
+        // a= -1 b=1 c=-500
+        var y = -x * x + x +500;
+        ctx.fillRect(x, y, 2, 2);
+    }
+
+</script>
+</body>
+</html>
